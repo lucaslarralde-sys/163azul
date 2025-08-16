@@ -1,0 +1,1 @@
+Colocá aquí tu logo como 'logo-ecowatt.png'.

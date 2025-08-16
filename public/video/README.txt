@@ -1,0 +1,1 @@
+Colocá aquí tu video como 'hero.mp4' (H.264 MP4 recomendado).

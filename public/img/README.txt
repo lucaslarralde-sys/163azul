@@ -1,0 +1,1 @@
+Opcional: colocá aquí 'hero-poster.jpg' para el placeholder del video.

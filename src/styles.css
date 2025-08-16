@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --blue:#0b5fa8;
+  --green:#1ea35a;
+  --ink:#0b2239;
+}
+
+/* Header blanco fijo */
+.site-header{ @apply sticky top-0 z-30 bg-white/95 backdrop-blur border-b border-slate-200; }
+.brand-img{ height:44px; }
+
+/* Hero */
+.hero{ @apply relative min-h-[68vh] grid items-end; }
+.hero video{ @apply absolute inset-0 w-full h-full object-cover; filter: saturate(1.1) contrast(1.05); }
+.hero-overlay{ @apply absolute inset-0; background: linear-gradient(180deg, rgba(0,23,43,.55), rgba(0,23,43,.55)); }
+.hero-content{ @apply relative text-white py-24 md:py-28; }
+
+/* Partners banda blanca */
+.partners-white{ @apply bg-white border-y border-slate-200 py-10; }
+.partners-logos img{ @apply h-12 md:h-14; filter: none; }
+
+/* Áreas */
+.area-row{ @apply py-12; }
+.area-grid{ @apply grid gap-6 items-stretch; grid-template-columns: 1.15fr 1fr; }
+.area-grid.reverse{ grid-template-columns: 1fr 1.15fr; }
+.area-grid.reverse .text{ order: 2; }
+.area-grid.reverse .gallery{ order: 1; }
+.text-card{ @apply bg-white rounded-xl shadow-sm border border-slate-200 p-6; }
+.gallery{ @apply rounded-xl p-3 grid grid-cols-2 gap-3; }
+.gallery button{ @apply relative rounded-lg overflow-hidden aspect-[4/3] bg-white; }
+.gallery button::before{ content:""; position:absolute; inset:0; background-size:cover; background-position:center; }
+
+/* fondos alternos para panel de fotos */
+.bg-photos-blue{ background: linear-gradient(135deg, #0b5fa8 0%, #0a4f8e 100%); }
+.bg-photos-green{ background: linear-gradient(135deg, #1ea35a 0%, #178e4b 100%); }
+.bg-photos-white{ @apply bg-white border border-slate-200; }
+
+/* Contacto */
+.contact{ @apply bg-slate-50 py-14; }
+.contact-grid{ @apply grid gap-8; grid-template-columns: 1.2fr 1fr; }
+.card{ @apply bg-white border border-slate-200 rounded-xl p-6; }
+
+/* Footer */
+.site-footer{ @apply border-t border-slate-200 py-4 bg-white; }
+.footer-inner{ @apply flex items-center justify-between text-slate-600; }
+
+@media (max-width: 980px){
+  .area-grid, .area-grid.reverse, .contact-grid{ grid-template-columns: 1fr; }
+  .area-grid.reverse .text, .area-grid.reverse .gallery{ order: initial; }
+}
